@@ -1,0 +1,32 @@
+<div class='card-wrapper'>
+  <div class='card text-white bg-secondary mb-3 card-width'>
+    <div class='card-body'>
+      <h5 class='card-title'>
+        {{@name}}
+      </h5>
+    </div>
+    <ul class='list-group list-group-flush'>
+      {{#each @stats as |stat index|}}
+        <li class='list-group-item text-dark card-stat-selector-wrapper'>
+          <div class='card-stat-selector-name '>
+            {{stat.name}} :
+            {{#if stat.value}}
+              {{stat.value}}
+            {{else}}
+              {{'N/A'}}
+            {{/if}}
+          </div>
+          {{#if @player}}
+            <button
+              type='button'
+              class='btn btn-secondary card-stat-selector-button'
+              {{on "click" (fn @onSelect index)}}
+            >
+              Select
+            </button>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

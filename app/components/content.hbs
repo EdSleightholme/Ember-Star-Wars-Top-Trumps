@@ -1,0 +1,47 @@
+<section {{did-insert this.loadGame}}>
+  <div class='wins-loses-tracker'>
+    <div class='wins-tracker'>
+      Times Won : {{this.wins}}
+    </div>
+    <div class='tracker-gap'></div>
+    <div>
+      Times Lost : {{this.lost}}
+    </div>
+  </div>
+  <div class='winner-bar'>
+    {{#if this.winner}}
+      <h3>
+        <span class='badge badge-secondary'>
+          YOU WIN
+        </span>
+      </h3>
+    {{else if this.loser}}
+      <h3>
+        <span class='badge badge-secondary'>
+          YOU LOST
+        </span>
+      </h3>
+    {{/if}}
+  </div>
+  <div class='mainbody'>
+    {{#each this.cardItems as |cardItem|}}
+      <Card
+        @player={{cardItem.player}}
+        @name={{cardItem.name}}
+        @stats={{cardItem.stats}}
+        @onSelect={{this.selectStat}}
+      />
+    {{/each}}
+  </div>
+  <button
+    type='button'
+    class='btn btn-primary card-stat-selector-button confirm-choice-button'
+    {{on 'click' this.confirm}}
+  >
+    {{#if this.played}}
+      Play Again
+    {{else}}
+      Confirm Choice
+    {{/if}}
+  </button>
+</section>

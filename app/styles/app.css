@@ -1,0 +1,105 @@
+.ember-application {
+    background-color: #363537;
+    max-height: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.outer_wrapper {
+    padding: 0rem 10rem;
+  }
+
+.mainbody {
+    background-color: #363537;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+.header {
+    background-color: #363537;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+  }
+
+.gap {
+    width:80%
+}
+.header_title_text{
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.header_title_wrapper {
+    width:17%
+}
+
+.footer {
+    background-color: #363537;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+  }
+
+.card-stat-selector-wrapper{
+   width:100%;
+   display:flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.card-stat-selector-name{
+    width:70%;
+    display: flex;
+    align-items: center;
+    height:3rem;
+ }
+.card-stat-selector-button{
+    width:30%;
+ }
+
+ .card-wrapper{
+  width: 20rem;
+  padding:3rem;
+ }
+
+ .card-width{
+  width: 18rem;
+ }
+
+ .confirm-choice-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .wins-loses-tracker{
+  display: flex;
+  justify-content:center;
+  padding: 1rem ;
+  background-color: #5d5c5e;
+  color: white;
+  width: 100%;
+ }
+ .tracker-gap{
+  width: 70%;
+ }
+
+ .winner-bar{
+  padding: 1rem;
+  display: flex;
+  justify-content:center;
+ }
